@@ -1,0 +1,9 @@
+สิ่งที่ฉันได้เรียนรู้คือ : 
+1. เริ่มจากเลือก element ที่เป็น class "meat" ทั้งหมดด้วย document.querySelectorAll(".meat")
+    วิธีที่ 1 (filter): เอาเนื้อทั้งหมดมาแปลงเป็น array แล้วใช้ .filter เลือกเฉพาะตัวที่ข้อความ (textContent) ที่มีคำว่า "soup"
+                    จะได้ array ของเนื้อที่เป็นซุป
+    วิธีที่ 2 (forEach + push):ดูทีละเมนูด้วย .forEach แล้วถ้าเจอคำว่า "soup" ก็เก็บลงไปใน result ผลลัพธ์เหมือนกัน
+2. การแก้ไข DOM (insertBefore, removeChild, replaceChild) เอา <ul> ที่มี id "soup" ออกมาเก็บไว้ในตัวแปร soupUlElement
+    2.1 insertBefore : สร้าง <li> ใหม่ชื่อ "Cabbage Soup" แล้วใส่ class "vegan" ให้ จากนั้นไปหาว่าใน <ul> ตัวไหนคือ "Beef Soup" แล้วเอา "Cabbage Soup" ไปแทรกไว้ก่อนหน้า
+    2.2 removeChild : หา <li> ที่เป็น "Vegetable Soup" แล้ว removeChild เพื่อลบออกจาก <ul>
+    2.3replaceChild : สร้าง <li> ใหม่ชื่อ "Pork Soup" แล้วใส่ class "meat" ให้ จากนั้นเอามาแทนที่ "Beef Soup"
